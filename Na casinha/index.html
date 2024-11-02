@@ -1,0 +1,249 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Na Casinha Tatto</title>
+    <link rel="icon" href="icon.png" type="image/x-icon"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        :root {
+            --spacing-small: 1rem;
+            --spacing-medium: 2rem;
+            --spacing-large: 3rem;
+        }
+
+        body {
+            background-color: #5a8666;
+            color: #916140;
+            overflow-x: hidden;
+        }
+
+        header {
+            width: 100%;
+            padding: var(--spacing-medium);
+            text-align: center;
+        }
+
+        .title-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        header h1 {
+            font-family: 'Permanent Marker', cursive;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: black;
+            position: relative;
+            text-shadow: 
+                2px 2px 0px #916140,
+                4px 4px 0px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            letter-spacing: 2px;
+            animation: titleFloat 3s ease-in-out infinite;
+            word-wrap: break-word;
+        }
+
+        @keyframes titleFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        nav {
+            padding: var(--spacing-small);
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-small);
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-button {
+            background-color: #916140;
+            color: rgb(0, 0, 0);
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            min-width: 150px;
+            text-align: center;
+        }
+
+        .social-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(145, 97, 64, 0.3);
+        }
+
+        main {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-medium);
+        }
+
+        .bio-section {
+            display: flex;
+            gap: var(--spacing-medium);
+            margin: var(--spacing-medium) 0;
+            flex-wrap: wrap;
+            background-color: rgba(255, 255, 255, 0.199);
+            padding: var(--spacing-medium);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Centraliza o conteúdo */
+        }
+
+        .bio-image {
+            width: 100%;
+            max-width: 300px;
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            background-size: cover;
+            margin: 0 auto;
+        }
+
+        .bio-text {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .bio-text h2 {
+            margin-bottom: var(--spacing-small);
+            font-size: clamp(1.5rem, 3vw, 1.8rem);
+            color: black;
+            font-family: 'Permanent Marker', cursive;
+            animation: titleFloat 3s ease-in-out infinite; /* Efeito de flutuação */
+        }
+
+        .bio-text p {
+            line-height: 1.6;
+            margin-bottom: var(--spacing-small);
+            font-size: clamp(0.8rem, 1.5vw, 0.9rem); /* Tamanho da fonte diminuído */
+            color: black; /* Definindo a cor do texto como preto */
+        }
+
+        h2 {
+            color: black;
+            font-family: 'Permanent Marker', cursive;
+            margin: var(--spacing-small) 0;
+            text-shadow: 1px 1px 0px #916140;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            text-align: center; /* Centraliza o título */
+            animation: titleFloat 3s ease-in-out infinite; /* Efeito de flutuação */
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-small);
+            margin-top: var(--spacing-medium);
+            width: 100%;
+        }
+
+        .gallery-item {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            background-size: contain; /* Mantém a imagem dentro da div */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Evita que a imagem se repita */
+            transition: transform 0.3s ease;
+        }
+
+        .anamnesis-button {
+            display: block;
+            width: min(90%, 250px);
+            margin: var(--spacing-large) auto;
+            padding: var(--spacing-small);
+            background-color: #916140;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .anamnesis-button:hover {
+            transform: translateY(-3px); /* Adiciona o efeito de pulo */
+            box-shadow: 0 4px 15px rgba(145, 97, 64, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: var(--spacing-medium);
+            margin-top: var(--spacing-medium);
+            border-top: 2px solid rgba(145, 97, 64, 0.2);
+            color: black;
+            font-size: clamp(0.8rem, 2vw, 1rem);
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title-container">
+            <h1>Na Casinha Tatto</h1>
+        </div>
+    </header>
+
+    <nav>
+        <a href="https://www.instagram.com/carolinetattooink" class="social-button" target="_blank">Instagram</a>
+        <a href="https://api.whatsapp.com/send/?phone=5511919423160&text&type=phone_number&app_absent=0" class="social-button" target="_blank">WhatsApp</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSePcbM3DaSjxHLXadZMyQf-OGOnccPZLpYOdZn0oSmJ2DKOkg/viewform" class="social-button" target="_blank">Ficha de Anamnese</a>
+    </nav>
+
+    <main>
+        <section class="bio-section">
+            <div class="bio-image" style="background-image: url('Perfil.jpg');"></div>
+            <div class="bio-text">
+                <h2>Conheça-me</h2>
+                <p>Olá, sou a Carol, uma tatuadora apaixonada pelo que faço, vivendo e explorando o mundo desde 1997.</p>
+                <p>Desde jovem, sempre fui fascinada pela arte e pela capacidade de expressar emoções e histórias através de desenhos.</p>
+                <p>Encontrei na tatuagem a forma perfeita de transformar essa paixão em profissão, permitindo que cada cliente leve consigo uma parte significativa de sua história.</p>
+                <p>Acredito que a tatuagem vai além da tinta na pele; é uma forma de expressão, de identidade e, muitas vezes, de superação.</p>
+                <p>Se você está procurando por uma tatuadora que combine técnica, criatividade e uma abordagem personalizada, estou aqui para ajudar a transformar suas ideias em realidade.</p>
+                <p>Vamos juntos criar algo incrível!</p>
+            </div>
+        </section>
+
+        <h2>Conheça Nosso Estúdio</h2>
+        <div class="gallery">
+            <div class="gallery-item" style="background-image: url('Studio1.jpg');"></div>
+            <div class="gallery-item" style="background-image: url('studio3.jpg');"></div>
+            <div class="gallery-item" style="background-image: url('studio4.jpg');"></div>
+            <div class="gallery-item" style="background-image: url('studi2.jpg');"></div>
+        </div>
+        <nav>
+            <a href="https://www.google.com.br/maps/@-23.5510166,-46.2081417,3a,75y,122.88h,89.29t/data=!3m7!1e1!3m5!1sWbNeSi2_pYcCGFHUWUCSzA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0.7099999999999937%26panoid%3DWbNeSi2_pYcCGFHUWUCSzA%26yaw%3D122.88!7i16384!8i8192?hl=pt-BR&coh=205410&entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D" class="social-button" target="_blank">
+                Como Chegar
+            </a>
+            <style>
+                .black-text {
+                    color: black;
+                }
+            </style>
+            <nav style="text-align: center;">   
+                <br> <!-- Quebra de linha -->
+                <nav style="text-align: center;">   
+                    <br> <!-- Quebra de linha -->
+                    <span style="color: black; display: block; margin-top: 10px;">
+                        This website was created by <strong><a href="https://link-do-perfil" style="color: black;">@winniegoncalves</a></strong>
+                    </span> <!-- Centralizando e adicionando margem -->
+                </nav>
+                
