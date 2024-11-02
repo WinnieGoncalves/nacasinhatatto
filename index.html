@@ -4,7 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Na Casinha Tatto</title>
-    <link rel="icon" href="icon.png" type="image/x-icon"/>
+    
+    <!-- Favicons -->
+    <link rel="icon" href="icon.png" type="image/png"/>
+    <link rel="shortcut icon" href="icon.png" type="image/png"/>
+    <link rel="apple-touch-icon" href="icon.png">
+    
+    <!-- Meta tags para compartilhamento -->
+    <meta property="og:title" content="Na Casinha Tatto">
+    <meta property="og:description" content="Estúdio de tatuagem personalizado">
+    <meta property="og:image" content="https://www.nacasinhatattoo.com.br/icon.png">
+    <meta property="og:url" content="https://www.nacasinhatattoo.com.br">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Na Casinha Tatto">
+    <meta name="twitter:description" content="Estúdio de tatuagem personalizado">
+    <meta name="twitter:image" content="https://www.nacasinhatattoo.com.br/icon.png">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
         
@@ -103,7 +121,7 @@
             padding: var(--spacing-medium);
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: center; /* Centraliza o conteúdo */
+            text-align: center;
         }
 
         .bio-image {
@@ -126,14 +144,14 @@
             font-size: clamp(1.5rem, 3vw, 1.8rem);
             color: black;
             font-family: 'Permanent Marker', cursive;
-            animation: titleFloat 3s ease-in-out infinite; /* Efeito de flutuação */
+            animation: titleFloat 3s ease-in-out infinite;
         }
 
         .bio-text p {
             line-height: 1.6;
             margin-bottom: var(--spacing-small);
-            font-size: clamp(0.8rem, 1.5vw, 0.9rem); /* Tamanho da fonte diminuído */
-            color: black; /* Definindo a cor do texto como preto */
+            font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+            color: black;
         }
 
         h2 {
@@ -142,8 +160,8 @@
             margin: var(--spacing-small) 0;
             text-shadow: 1px 1px 0px #916140;
             font-size: clamp(1.5rem, 3vw, 2rem);
-            text-align: center; /* Centraliza o título */
-            animation: titleFloat 3s ease-in-out infinite; /* Efeito de flutuação */
+            text-align: center;
+            animation: titleFloat 3s ease-in-out infinite;
         }
 
         .gallery {
@@ -159,9 +177,9 @@
             aspect-ratio: 1;
             border-radius: 15px;
             overflow: hidden;
-            background-size: contain; /* Mantém a imagem dentro da div */
-            background-position: center; /* Centraliza a imagem */
-            background-repeat: no-repeat; /* Evita que a imagem se repita */
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
             transition: transform 0.3s ease;
         }
 
@@ -180,7 +198,7 @@
         }
 
         .anamnesis-button:hover {
-            transform: translateY(-3px); /* Adiciona o efeito de pulo */
+            transform: translateY(-3px);
             box-shadow: 0 4px 15px rgba(145, 97, 64, 0.3);
         }
 
@@ -192,6 +210,10 @@
             color: black;
             font-size: clamp(0.8rem, 2vw, 1rem);
             width: 100%;
+        }
+
+        .black-text {
+            color: black;
         }
     </style>
 </head>
@@ -222,7 +244,7 @@
             </div>
         </section>
 
-        <h2>Conheça Nosso Estúdio</h2>
+        <h2>Casinha</h2>
         <div class="gallery">
             <div class="gallery-item" style="background-image: url('Studio1.jpg');"></div>
             <div class="gallery-item" style="background-image: url('Studio3.jpg');"></div>
@@ -233,17 +255,17 @@
             <a href="https://www.google.com.br/maps/@-23.5510166,-46.2081417,3a,75y,122.88h,89.29t/data=!3m7!1e1!3m5!1sWbNeSi2_pYcCGFHUWUCSzA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0.7099999999999937%26panoid%3DWbNeSi2_pYcCGFHUWUCSzA%26yaw%3D122.88!7i16384!8i8192?hl=pt-BR&coh=205410&entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D" class="social-button" target="_blank">
                 Como Chegar
             </a>
-            <style>
-                .black-text {
-                    color: black;
-                }
-            </style>
+        </nav>
+        
+        <nav style="text-align: center;">   
+            <br>
             <nav style="text-align: center;">   
-                <br> <!-- Quebra de linha -->
-                <nav style="text-align: center;">   
-                    <br> <!-- Quebra de linha -->
-                    <span style="color: black; display: block; margin-top: 10px;">
-                        This website was created by <strong><a href="https://link-do-perfil" style="color: black;">@winniegoncalves</a></strong>
-                    </span> <!-- Centralizando e adicionando margem -->
-                </nav>
-                
+                <br>
+                <span style="color: black; display: block; margin-top: 10px;">
+                    This website was created by <strong><a href="https://link-do-perfil" style="color: black;">@winniegoncalves</a></strong>
+                </span>
+            </nav>
+        </nav>
+    </main>
+</body>
+</html>
