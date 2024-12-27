@@ -24,13 +24,13 @@
     <meta name="twitter:image" content="https://www.nacasinhatattoo.com.br/icon.png">
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         :root {
@@ -59,7 +59,7 @@
         }
 
         header h1 {
-            font-family: 'Permanent Marker', cursive;
+            font-family: 'Poppins', sans-serif;
             font-size: clamp(2.5rem, 5vw, 4rem);
             color: black;
             position: relative;
@@ -143,7 +143,7 @@
             margin-bottom: var(--spacing-small);
             font-size: clamp(1.5rem, 3vw, 1.8rem);
             color: black;
-            font-family: 'Permanent Marker', cursive;
+            font-family: 'Poppins', sans-serif;
             animation: titleFloat 3s ease-in-out infinite;
         }
 
@@ -156,7 +156,7 @@
 
         h2 {
             color: black;
-            font-family: 'Permanent Marker', cursive;
+            font-family: 'Poppins', sans-serif;
             margin: var(--spacing-small) 0;
             text-shadow: 1px 1px 0px #916140;
             font-size: clamp(1.5rem, 3vw, 2rem);
@@ -181,6 +181,11 @@
             background-position: center;
             background-repeat: no-repeat;
             transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
         .anamnesis-button {
@@ -251,20 +256,12 @@
             <div class="gallery-item" style="background-image: url('Studio4.jpg');"></div>
             <div class="gallery-item" style="background-image: url('Studi2.jpg');"></div>
         </div>
-        <nav>
-            <a href="https://www.google.com.br/maps/@-23.5510166,-46.2081417,3a,75y,122.88h,89.29t/data=!3m7!1e1!3m5!1sWbNeSi2_pYcCGFHUWUCSzA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0.7099999999999937%26panoid%3DWbNeSi2_pYcCGFHUWUCSzA%26yaw%3D122.88!7i16384!8i8192?hl=pt-BR&coh=205410&entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D" class="social-button" target="_blank">
-                Como Chegar
-            </a>
-        </nav>
         
         <nav style="text-align: center;">   
             <br>
-            <nav style="text-align: center;">   
-                <br>
-                <span style="color: black; display: block; margin-top: 10px;">
-                    This website was created by <strong><a href="https://link-do-perfil" style="color: black;">@winniegoncalves</a></strong>
-                </span>
-            </nav>
+            <span style="color: black; display: block; margin-top: 10px;">
+                Created by <strong><a href="https://link-do-perfil" style="color: black;">@winniegoncalves</a></strong>
+            </span>
         </nav>
     </main>
 </body>
